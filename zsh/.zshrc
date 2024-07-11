@@ -5,6 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Zsh theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -65,13 +71,11 @@ export PATH=$HOME/development/flutter/bin:$PATH
 # CocoaPods
 export PATH=$HOME/.gem/bin:$PATH
 
-# Zsh theme
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 export EDITOR=nvim
+
+# Suppress warning about instant promt.
+# Zsh will start quickly but prompt will jump down after initialization.
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
