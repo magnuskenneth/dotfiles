@@ -23,3 +23,5 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+
+vim.keymap.set("n", "<leader>w", "<esc>:w<cr>", { desc = "Save file" })
