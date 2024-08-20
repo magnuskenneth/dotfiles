@@ -25,3 +25,4 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.keymap.set("n", "<leader>w", "<esc>:w<cr>", { desc = "Save file" })
+vim.keymap.set("n", "<leader>vs", "<esc>:vsplit<cr>", { desc = "Split vertically" })
