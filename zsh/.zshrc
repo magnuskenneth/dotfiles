@@ -47,6 +47,7 @@ alias test="npm run test"
 alias db="npm run db"
 alias tsc="npm run tsc"
 alias gitd="git difftool --tool=vimdiff"
+alias vim="nvim"
 
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
