@@ -13,6 +13,7 @@ return {
           "lua_ls",
           "tsserver",
           "html",
+          "tailwindcss",
           "eslint",
           "terraformls",
           "svelte",
@@ -35,6 +36,9 @@ return {
         capabilities = capabilites,
       })
       lspconfig.html.setup({
+        capabilities = capabilites,
+      })
+      lspconfig.tailwindcss.setup({
         capabilities = capabilites,
       })
       lspconfig.eslint.setup({
