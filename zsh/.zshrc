@@ -48,6 +48,8 @@ alias db="npm run db"
 alias tsc="npm run tsc"
 alias gitd="git difftool --tool=vimdiff"
 alias vim="nvim"
+alias v="nvim"
+alias lg="lazygit"
 
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -80,3 +82,7 @@ export EDITOR=nvim
 # Suppress warning about instant promt.
 # Zsh will start quickly but prompt will jump down after initialization.
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
