@@ -48,8 +48,10 @@ alias db="npm run db"
 alias tsc="npm run tsc"
 alias gitd="git difftool --tool=vimdiff"
 alias vim="nvim"
-alias v="nvim"
+alias vi="nvim"
 alias lg="lazygit"
+alias fzb='fzf --preview "bat --color=always {}"'
+alias inv='nvim $(fzf -m --preview "bat --color=always {}")'
 
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -78,6 +80,9 @@ export PATH=$HOME/.gem/bin:$PATH
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 export EDITOR=nvim
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Suppress warning about instant promt.
 # Zsh will start quickly but prompt will jump down after initialization.
