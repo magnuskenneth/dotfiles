@@ -51,7 +51,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias lg="lazygit"
 alias fzb='fzf --preview "bat --color=always {}"'
-alias inv='nvim $(fzf -m --preview "bat --color=always {}")'
+alias fzn='nvim $(fzf -m --preview "bat --color=always {}")'
 
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
