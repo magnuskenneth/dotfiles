@@ -3,6 +3,7 @@ vim.cmd("set number")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.cmd("set ignorecase")
 -- vim.cmd("set nohlsearch")
 
 vim.g.background = "light"
@@ -10,13 +11,10 @@ vim.g.background = "light"
 vim.opt.swapfile = false
 
 -- Navigate between windows with <C-h>, <C-j>, <C-k>, <C-l>
-vim.keymap.set("n", "<c-h>", ":wincmd k<CR>")
-vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
-vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
-vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
-
--- vim.keymap.set("n", "<leader>q", ":q<CR>")
--- vim.keymap.set("n", "<leader>Q", ":q!<CR>")
+vim.keymap.set("n", "<c-h>", ":wincmd k<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<c-l>", ":wincmd l<CR>", { noremap = true, silent = true })
 
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
@@ -24,5 +22,6 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.keymap.set("n", "<leader>w", "<esc>:w<cr>", { desc = "Save file" })
-vim.keymap.set("n", "<leader>vs", "<esc>:vsplit<cr>", { desc = "Split vertically" })
+vim.keymap.set("n", "<leader>w", "<esc>:w<cr>", { desc = "Save file" }, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>vs", "<esc>:vsplit<cr>", { desc = "Split vertically" }, { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<F5>", ":set ignorecase!<CR>", { noremap = true, silent = true })
