@@ -9,7 +9,13 @@ return {
 			},
 			suggestion = {
 				auto_trigger = true,
-				keymap = { accept = "<C-j>" },
+				keymap = {
+					accept = "<Tab>",
+					next = "<C-n>",
+					prev = "<C-p>",
+					accept_word = "<C-w>",
+					accept_line = "<C-l>",
+				},
 			},
 			["*"] = true, -- If you add "*" as a filetype, the default configuration for filetypes won't be used anymore. e.g.
 		})
