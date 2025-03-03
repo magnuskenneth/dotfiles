@@ -24,4 +24,10 @@ vim.g.maplocalleader = "\\"
 
 vim.keymap.set("n", "<leader>w", "<esc>:w<cr>", { desc = "Save file" }, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>vs", "<esc>:vsplit<cr>", { desc = "Split vertically" }, { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<F5>", ":set ignorecase!<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<F5>", ":set ignorecase!<CR>", { noremap = true, silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>lg",
+	":!tmux new-window -c " .. vim.fn.getcwd() .. " -- lazygit <CR><CR>",
+	{ silent = true }
+)
