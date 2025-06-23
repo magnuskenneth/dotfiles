@@ -9,6 +9,7 @@ vim.cmd("set ignorecase")
 vim.g.background = "light"
 
 vim.opt.swapfile = false
+vim.opt.splitright = true
 
 -- Navigate between windows with <C-h>, <C-j>, <C-k>, <C-l>
 vim.keymap.set("n", "<c-h>", ":wincmd k<CR>", { noremap = true, silent = true })
