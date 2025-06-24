@@ -77,6 +77,10 @@ export PATH=$HOME/development/flutter/bin:$PATH
 # CocoaPods
 export PATH=$HOME/.gem/bin:$PATH
 
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # Tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
